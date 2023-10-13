@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+:root {
+    --first-color: hsl(79, 72%, 55%);
+    --first-color-light: hsl(79, 97%, 77%);
+    --first-color-alt: hsl(79, 67%, 52%);
+    --first-color-dark: hsl(79, 63%, 50%);
+    --first-color-gray: hsl(79, 6%, 64%);
+    --title-color: hsl(180, 4%, 98%);
+    --title-color-black: hsl(180, 4%, 12%);
+    --text-color: hsl(180, 4%, 72%);
+    --text-color-light: hsl(180, 4%, 65%);
+    --body-color: hsl(180, 12%, 8%);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+body {
+    background-color: var(--body-color);
+    font-size: 18px;
+    font-family: "Montserrat";
+    color: var(--title-color-black);
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.container {
+    padding: 30px;
+    background-color: var(--first-color);
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px #00000011;
+    width: 90%;
+    max-width: 400px;
+}
+
+form {
+    width: 100%;
+    font-size: 20px;
+}
+
+.result {
+    background-color: var(--title-color-black);
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.result ::placeholder {
+    color: #ffffff;
+}
+
+.result #result {
+    width: 85%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.result .clipboard {
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    cursor: pointer;
+    background-color: var(--first-color-alt);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field input[type="number"] {
+    width: 50px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    padding-right: 0px;
+    font-size: 16px;
+    background-color: var(--title-color-black);
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.field {
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    padding-right: 10px;
+    transition: 0.3s ease background-color;
+}
+
+.field:first-of-type {
+    padding-right: 0;
+}
+
+.field:hover {
+    background-color: rgb(26, 29, 31);
+    color: #ffffff;
+}
+
+.field label {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.field input {
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    background-color: var(--title-color-black);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 6px;
+}
+
+@media only screen and (max-width: 678px) {
+    .field {
+        font-size: 16px;
+    }
+}
